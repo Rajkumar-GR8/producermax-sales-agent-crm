@@ -4,13 +4,14 @@
       <div class="col-md-12 pm_landingview">
         <div class="pm_landingview_div">                       
           <div>
-            <h1>Welcome to ProducerMAX! A secure website to electronically sign the Scope Of Appointment (SOA) form</h1>              
-          </div>          
+            <h1 class="{{ validation.value }}">Welcome to ProducerMAX! A secure website to electronically sign the Scope Of Appointment (SOA) form</h1>              
+          </div>
           <div>
             <!-- Start validation form -->
-            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-
-            </form>
+            
+            <div id="captcha">sample</div>
+            <input type="text" [formControl]="validation" />
+            <button (click) = "checkValue()">Submit</button>          
             <!-- End validation Form-->            
           </div>
         </div>
