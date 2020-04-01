@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-export type EditorType = 'name';
+export type EditorType = 'validation';
 
 @Component({
   selector: 'my-app',

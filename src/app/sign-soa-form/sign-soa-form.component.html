@@ -1,0 +1,160 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 pm_landingview">
+        <div>                        
+          <h3>Sign SOA Form</h3>                            
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pm_hm_article mobilenotvisible">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div>                        
+          <p>The Centers for Medicare and Medicaid Services (CMS) requires agent to document the scope of a marketing appointment prior to any individual representative.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+<form class="personForm"> -->
+  <!--
+  <section class="pm_hm_article">
+    <div class="container">
+      <h3>Products interested to discuss</h3><br>
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="pm_download_mobileapp_content1">
+              <table border="0">
+                <tr>
+                  <td><input type="checkbox" ng-model="standalone" name="standalone" id="standalone"  /> <label for="standalone" class="checker"></label></td>
+                  <td valign="top">Stand-alone Medicare Prescription Drug Plans (Part D)</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" ng-model="medicare" name="medicare" id="medicare" /> <label for="medicare" class="checker"></label></td>
+                  <td valign="top">Medicare Advantage Plans (Part C) and Cost Plans</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" ng-model="plansdental" name="plansdental" id="plansdental" /> <label for="plansdental" class="checker"></label></td>
+                  <td valign="top">Plans Dental/Vision/Hearing Products</td>
+                </tr>
+              </table>
+            </div>                   	
+          </div>
+          <div class="col-md-6"> 
+            <div class="pm_download_mobileapp_content1">
+              <table border="0">
+                <tr>
+                  <td><input type="checkbox" ng-model="hospitalindemnity" name="hospitalindemnity" id="hospitalindemnity" /> <label for="hospitalindemnity" class="checker"></label></td>
+                  <td valign="top">Hospital Indemnity Products</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" ng-model="medicaresupplement" name="medicaresupplement" id="medicaresupplement" />   <label for="medicaresupplement" class="checker"></label></td>
+                  <td valign="top"> Medicare Supplement (Medigap) Products</td>
+                </tr>
+              </table>
+            </div>                   	
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pm_hm_article">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"> 
+          <div class="pm_download_mobileapp_content1">
+            <label for="name">Beneficiary Name <span style="color:#FF0000">*</span></label>
+            <input id="name" name="name" type="text" ng-model="person.name" required placeholder="Your full name" />
+            <span class="error" ng-show="personForm.name.$error.required">*</span>
+          </div>               	
+        </div>
+        <div class="col-md-4"> 
+          <div class="pm_download_mobileapp_content1">
+            <label for="contact">Beneficiary Phone <span style="color:#FF0000">*</span></label>
+
+            <input id="mobile" name="mobile" type="number" ng-model="person.mobile" required  placeholder="Your home phone"/>
+            <span class="error" ng-show="personForm.mobile.$error.required">*</span>
+
+            <span class="error" ng-show="personForm.mobile.$error.mobile">Invalid mobile!</span>
+          </div>                   	
+        </div>
+        <div class="col-md-4"> 
+        	<div class="pm_download_mobileapp_content1">                
+            <label for="adress">Beneficiary Address <span style="color:#FF0000">*</span></label>
+            <input id="address" name="address" type="text" ng-model="person.address" required  placeholder="Your mail address, city, state, zipcode"/>
+            <span class="error" ng-show="personForm.address.$error.required">*</span>
+          </div>                   	
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pm_hm_article">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"> 
+          <div class="pm_download_mobileapp_content1">
+            <label for="name">Representative’s Name</label>
+            <input id="representative" name="representative" type="text" ng-model="person.representative" placeholder="If you are filing for someone" />
+          </div>                   	
+        </div>
+      <div class="col-md-4"> 
+        <div class="pm_download_mobileapp_content1">
+          <label for="adress">Your Relationship to the Beneficiary</label>
+          <input id="relationship" name="relationship" type="text" ng-model="person.relationship" placeholder="Your Relationship to the Beneficiary"/>
+        </div>                   	
+      </div>
+      <div class="col-md-4"></div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="container">
+      <div class="row" style="border:#188fa6 1px solid;">
+        <div class="col-md-12" style="background:#188fa6; color:#FFFFFF; text-align:center; padding:10px;"> 
+          Benificiary Authorized Representative Signature and Signature Date - Sign Below Using Touchscreen
+        </div>    
+        <div class="col-md-6" style="padding:15px;">
+          <div class="containersign" ng-style="{'max-width': boundingBox.width + 'px', 'max-height': boundingBox.height + 'px'}">
+          <signature-pad accept="accept" clear="clear" height="150px" width="520px" dataurl="dataurl" style="height:200px; width:100%;l"></signature-pad>
+          </div>
+          <div class="buttons">
+            <button ng-click="clear()">Clear</button>
+          </div>
+          <div class="result" ng-show="signature">
+            <img ng-src="{{ signature.dataUrl }}">
+          </div>
+        </div>      
+        <div class="col-md-6" style="padding:20px;">
+          Signature Date :<br/><br/>
+          <p><span>
+            <script type="text/ecmascript" language="javascript">    
+              var soadate = new Date();
+                
+              var date = soadate.getUTCDate();
+              var month = soadate.getUTCMonth() + 1; 
+              var year = soadate.getUTCFullYear();
+                
+              var dateStr = month + "/" + date + "/" + year;
+              document.write(dateStr);
+            </script>
+          </span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pm_hm_article">
+    <div class="container"></div>            
+      <div class="row">
+        <button class="pm_landingview_btn">SUBMIT & DOWNLOAD</button>
+      </div>
+    </div>
+  </section> -->
+<!-- </form> -->
